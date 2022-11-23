@@ -1,11 +1,17 @@
+using Contexts;
+using Microsoft.EntityFrameworkCore;
+using Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IProductRepo, MySqlRepo>();
+String connString = builder.Configuration["ConnectionStrings:DefaultConnection"];
+builder.Services.AddDbContext<ProductsContext>(opt => opt.UseMySql(connString, ServerVersion.AutoDetect(connString)));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
@@ -16,7 +22,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
