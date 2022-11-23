@@ -1,15 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Models;
 using Contexts;
+using DTO;
+using AutoMapper;
 
 namespace Repositories
 {
     public class MySqlRepo : IProductRepo
     {
         private readonly ProductsContext _context;
+        private readonly IMapper _mapper;
+        public List<Product> prodList { get; set; } = new();
 
         public MySqlRepo()
         {
@@ -22,23 +25,28 @@ namespace Repositories
 
         public IEnumerable<Product> GetAllProducts()
         {
-            return _context.ListProducts;
+            // var products = _mapper.Map<IEnumerable<ProductsReadDTO>>(_context.Products);
+            // foreach (ProductsReadDTO product in products)
+            // {
+            //     product.ImageBytes = File.ReadAllBytes(product.Image);
+            // }
+            return _context.Products;
         }
 
         public Product GetProductById(int id)
         {
-            return _context.ListProducts.FirstOrDefault<Product>(p => p.Id == id);
+            return _context.Products.FirstOrDefault<Product>(p => p.Id == id);
         }
 
         public void AddProduct(Product product)
         {
-            _context.ListProducts.Add(product);
+            _context.Products.Add(product);
         }
 
 
         public void UpdateProduct(Product product)
         {
-            //_context.ListProducts.Update(product);
+            //_context.Products.Update(product);
         }
         public void SaveChanges()
         {
@@ -47,7 +55,7 @@ namespace Repositories
 
         public void DeleteProduct(Product product)
         {
-            _context.ListProducts.Remove(product);
+            _context.Products.Remove(product);
         }
     }
 }

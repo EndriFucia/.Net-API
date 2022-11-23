@@ -1,7 +1,6 @@
+using System.Net;
+using System.IO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
@@ -28,6 +27,7 @@ namespace Controllers
         public ActionResult GetAllProducts()
         {
             return Ok(_mapper.Map<IEnumerable<ProductsReadDTO>>(_repo.GetAllProducts()));
+            //return Ok(_repo.GetAllProducts());
         }
 
         [HttpGet("{id}", Name = "GetProductById")]
@@ -37,9 +37,17 @@ namespace Controllers
         }
 
         [HttpPost]
-        public ActionResult AddProduct(ProductsWriteDTO productsWriteDTO)
+        public ActionResult AddProduct([FromForm] ProductsWriteDTO productsWriteDTO)
         {
+            // map the product and create a unique file name
             var product = _mapper.Map<Product>(productsWriteDTO);
+            //product.Image = Guid.NewGuid().ToString() + "_" + productsWriteDTO.File.FileName;
+
+            //save the image file
+            // var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "Images/", product.Image);
+            // productsWriteDTO.File.CopyTo(new FileStream(fullPath, FileMode.Create));
+
+            //Save data to DbContext
             _repo.AddProduct(product);
             _repo.SaveChanges();
             return CreatedAtRoute(nameof(GetProductById), new { Id = product.Id }, product);
