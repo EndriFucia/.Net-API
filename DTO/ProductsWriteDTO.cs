@@ -11,6 +11,6 @@ namespace DTO
         public String Description { get; set; } = String.Empty;
         public double Price { get; set; }
         public string Image { get; set; } = String.Empty;
-        public byte[] ImageBytes { get; set; } = Array.Empty<byte>();
+        public IFormFile File { get; set; }
     }
 }

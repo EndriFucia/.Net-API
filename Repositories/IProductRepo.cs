@@ -12,7 +12,7 @@ namespace Repositories
         IEnumerable<Product> GetAllProducts();
         Product GetProductById(int id);
         void AddProduct(Product product);
-        void UpdateProduct(Product product);
+        void UpdateProduct(ProductsUpdateDTO product);
         void DeleteProduct(Product product);
         void SaveChanges();
     }

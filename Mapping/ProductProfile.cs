@@ -14,8 +14,7 @@ namespace Mapping
     {
         public ProductProfile()
         {
-            //CreateMap<Product, ProductsReadDTO>().ForMember(dest => dest.ImageBytes, opt => opt.MapFrom((src, dest, destMember, context) => File.ReadAllBytes(src.Image)));
-            CreateMap<Product, ProductsReadDTO>().ForMember(dest => dest.ImageBytes, opt => opt.MapFrom<CustomResolver>());
+            CreateMap<Product, ProductsReadDTO>().ForMember(dest => dest.Image, opt => opt.MapFrom<CustomResolver>());
             CreateMap<ProductsWriteDTO, Product>();
             CreateMap<ProductsUpdateDTO, Product>();
         }

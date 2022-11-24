@@ -8,11 +8,11 @@ using Models;
 
 namespace Mapping
 {
-    public class CustomResolver : IValueResolver<Product, ProductsReadDTO, byte[]>
+    public class CustomResolver : IValueResolver<Product, ProductsReadDTO, string>
     {
-        public byte[] Resolve(Product source, ProductsReadDTO destination, byte[] destMember, ResolutionContext context)
+        public string Resolve(Product source, ProductsReadDTO destination, string destMember, ResolutionContext context)
         {
-            return File.ReadAllBytes("Images/" + source.Image);
+            return "http://10.0.2.2:5067/Images/" + source.Image;
         }
     }
 }

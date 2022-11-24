@@ -12,6 +12,5 @@ namespace Models
         public String Description { get; set; } = String.Empty;
         public double Price { get; set; }
         public String Image { get; set; } = String.Empty;
-        //public byte[] ImageBytes { get; set; } = Array.Empty<byte>();
     }
 }

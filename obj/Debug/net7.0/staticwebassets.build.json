@@ -1,11 +1,71 @@
 {
   "Version": 1,
-  "Hash": "awam8O0n+W2PQvhYKvYczPgjSNb72b2FT+CKI61mtoc=",
+  "Hash": "W+rTE+zOpzHiBSwzLHOXwxdvkHlFR2RB+SFQO8knwWM=",
   "Source": ".Net-API",
   "BasePath": "_content/.Net-API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": ".Net-API\\wwwroot",
+      "Source": ".Net-API",
+      "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
+      "BasePath": "_content/.Net-API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg",
+      "SourceId": ".Net-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
+      "BasePath": "_content/.Net-API",
+      "RelativePath": "Images/45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\audi.jpg",
+      "SourceId": ".Net-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
+      "BasePath": "_content/.Net-API",
+      "RelativePath": "Images/audi.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\audi.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\dd8b6b6f-859d-4efb-97f7-81362cc176ff_tesla.jpg",
+      "SourceId": ".Net-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
+      "BasePath": "_content/.Net-API",
+      "RelativePath": "Images/dd8b6b6f-859d-4efb-97f7-81362cc176ff_tesla.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\dd8b6b6f-859d-4efb-97f7-81362cc176ff_tesla.jpg"
+    }
+  ]
 }

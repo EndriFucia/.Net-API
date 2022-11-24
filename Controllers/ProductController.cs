@@ -16,18 +16,20 @@ namespace Controllers
     {
         private readonly IProductRepo _repo;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _env;
+        private readonly String _hostUrl = "http://10.0.2.2:5067/";
 
-        public ProductController(IProductRepo repo, IMapper mapper)
+        public ProductController(IProductRepo repo, IMapper mapper, IWebHostEnvironment env)
         {
             _repo = repo;
             _mapper = mapper;
+            _env = env;
         }
 
         [HttpGet]
         public ActionResult GetAllProducts()
         {
             return Ok(_mapper.Map<IEnumerable<ProductsReadDTO>>(_repo.GetAllProducts()));
-            //return Ok(_repo.GetAllProducts());
         }
 
         [HttpGet("{id}", Name = "GetProductById")]
@@ -41,11 +43,11 @@ namespace Controllers
         {
             // map the product and create a unique file name
             var product = _mapper.Map<Product>(productsWriteDTO);
-            //product.Image = Guid.NewGuid().ToString() + "_" + productsWriteDTO.File.FileName;
+            product.Image = Guid.NewGuid().ToString() + "_" + productsWriteDTO.File.FileName;
 
             //save the image file
-            // var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "Images/", product.Image);
-            // productsWriteDTO.File.CopyTo(new FileStream(fullPath, FileMode.Create));
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", product.Image);
+            productsWriteDTO.File.CopyTo(new FileStream(fullPath, FileMode.Create));
 
             //Save data to DbContext
             _repo.AddProduct(product);
@@ -54,18 +56,38 @@ namespace Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateProduct(int id, ProductsUpdateDTO productsUpdateDTO)
+        public ActionResult UpdateProduct(int id, [FromForm] ProductsUpdateDTO productsUpdateDTO)
         {
-            var productToUpdate = _repo.GetProductById(id);
-            if (productToUpdate == null)
+            var product = _repo.GetProductById(id);
+            if (product == null)
             {
                 return NotFound();
             }
 
-            _mapper.Map(productsUpdateDTO, productToUpdate);
-            _repo.UpdateProduct(productToUpdate);
+            String[] strList = product.Image.Split("http://10.0.2.2:5067/Images/");
+            String filePath = _env.WebRootPath + "\\Images\\";
+
+            //Delet image
+            if (System.IO.File.Exists(Path.Combine(filePath, strList[0])))
+            {
+                // If file found, delete it    
+                System.IO.File.Delete(Path.Combine(filePath, strList[0]));
+                Console.WriteLine("File deleted.");
+            }
+
+            //Add the new image
+            productsUpdateDTO.Image = Guid.NewGuid().ToString() + "_" + productsUpdateDTO.File.FileName;
+
+            //save the image file
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", productsUpdateDTO.Image);
+            productsUpdateDTO.File.CopyTo(new FileStream(fullPath, FileMode.Create));
+            Console.WriteLine("File updated!.");
+
+
+            _mapper.Map(productsUpdateDTO, product);
+            _repo.UpdateProduct(productsUpdateDTO);
             _repo.SaveChanges();
-            return Ok(productToUpdate);
+            return Ok(product);
         }
 
         [HttpDelete("{id}")]

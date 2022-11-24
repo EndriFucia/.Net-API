@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg",
+      "PackagePath": "staticwebassets\\Images\\45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg"
+    },
+    {
+      "Id": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\audi.jpg",
+      "PackagePath": "staticwebassets\\Images\\audi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\dd8b6b6f-859d-4efb-97f7-81362cc176ff_tesla.jpg",
+      "PackagePath": "staticwebassets\\Images\\dd8b6b6f-859d-4efb-97f7-81362cc176ff_tesla.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild..Net-API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build..Net-API.props",
+      "PackagePath": "build\\.Net-API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting..Net-API.props",
+      "PackagePath": "buildMultiTargeting\\.Net-API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive..Net-API.props",
+      "PackagePath": "buildTransitive\\.Net-API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
