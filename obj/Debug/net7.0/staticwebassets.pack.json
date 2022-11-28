@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg",
-      "PackagePath": "staticwebassets\\Images\\06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg"
-    },
-    {
       "Id": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\1ee201d7-fa4e-42e2-9315-4ea466891677_tesla2.jpg",
       "PackagePath": "staticwebassets\\Images\\1ee201d7-fa4e-42e2-9315-4ea466891677_tesla2.jpg"
     },

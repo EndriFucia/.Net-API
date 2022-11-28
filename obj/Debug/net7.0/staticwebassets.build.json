@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dwlUsCRBKT3oK+QzOSSuVa2gmfu0+ixrn80jE3slYnM=",
+  "Hash": "F9/VpCnnJZaiqugNExi+3qKIx8gF4ojD4DTnhZvDHPc=",
   "Source": ".Net-API",
   "BasePath": "_content/.Net-API",
   "Mode": "Default",
@@ -16,23 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg",
-      "SourceId": ".Net-API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
-      "BasePath": "_content/.Net-API",
-      "RelativePath": "Images/06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg"
-    },
     {
       "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\1ee201d7-fa4e-42e2-9315-4ea466891677_tesla2.jpg",
       "SourceId": ".Net-API",

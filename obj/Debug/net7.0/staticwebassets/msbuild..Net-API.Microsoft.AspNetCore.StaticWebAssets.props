@@ -1,21 +1,5 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>.Net-API</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/.Net-API</BasePath>
-      <RelativePath>Images/06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\1ee201d7-fa4e-42e2-9315-4ea466891677_tesla2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>.Net-API</SourceId>

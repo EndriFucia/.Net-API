@@ -39,16 +39,16 @@ namespace Controllers
         }
 
         [HttpPost]
-        public ActionResult AddProduct([FromForm] ProductsWriteDTO productsWriteDTO)
+        public async Task<ActionResult> AddProduct(ProductsWriteDTO productsWriteDTO)
         {
             Console.WriteLine(productsWriteDTO.ToString());
             // map the product and create a unique file name
             var product = _mapper.Map<Product>(productsWriteDTO);
-            product.Image = Guid.NewGuid().ToString() + "_" + productsWriteDTO.File.FileName;
+            product.Image = Guid.NewGuid().ToString() + "_" + productsWriteDTO.Image;
 
             //save the image file
             var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", product.Image);
-            productsWriteDTO.File.CopyTo(new FileStream(fullPath, FileMode.Create));
+            await System.IO.File.WriteAllBytesAsync(fullPath, productsWriteDTO.File);
 
             //Save data to DbContext
             _repo.AddProduct(product);
@@ -102,7 +102,7 @@ namespace Controllers
 
             _repo.DeleteProduct(productToDelete);
             _repo.SaveChanges();
-            return Ok("Product deleted!");
+            return NoContent();
         }
     }
 }
