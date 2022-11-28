@@ -41,6 +41,7 @@ namespace Controllers
         [HttpPost]
         public ActionResult AddProduct([FromForm] ProductsWriteDTO productsWriteDTO)
         {
+            Console.WriteLine(productsWriteDTO.ToString());
             // map the product and create a unique file name
             var product = _mapper.Map<Product>(productsWriteDTO);
             product.Image = Guid.NewGuid().ToString() + "_" + productsWriteDTO.File.FileName;

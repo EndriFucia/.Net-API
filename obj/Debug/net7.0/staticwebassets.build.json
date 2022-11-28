@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W+rTE+zOpzHiBSwzLHOXwxdvkHlFR2RB+SFQO8knwWM=",
+  "Hash": "dwlUsCRBKT3oK+QzOSSuVa2gmfu0+ixrn80jE3slYnM=",
   "Source": ".Net-API",
   "BasePath": "_content/.Net-API",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg",
+      "SourceId": ".Net-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
+      "BasePath": "_content/.Net-API",
+      "RelativePath": "Images/06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\06d93561-5cdc-49a1-90f9-6f0e1c127925_tesla.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\1ee201d7-fa4e-42e2-9315-4ea466891677_tesla2.jpg",
+      "SourceId": ".Net-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
+      "BasePath": "_content/.Net-API",
+      "RelativePath": "Images/1ee201d7-fa4e-42e2-9315-4ea466891677_tesla2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\1ee201d7-fa4e-42e2-9315-4ea466891677_tesla2.jpg"
+    },
     {
       "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg",
       "SourceId": ".Net-API",
@@ -34,12 +68,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg"
     },
     {
-      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\audi.jpg",
+      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\7bce997f-1098-47e7-94e3-24679f9c95c5_tesla.jpg",
       "SourceId": ".Net-API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
       "BasePath": "_content/.Net-API",
-      "RelativePath": "Images/audi.jpg",
+      "RelativePath": "Images/7bce997f-1098-47e7-94e3-24679f9c95c5_tesla.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\audi.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\7bce997f-1098-47e7-94e3-24679f9c95c5_tesla.jpg"
     },
     {
-      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\dd8b6b6f-859d-4efb-97f7-81362cc176ff_tesla.jpg",
+      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\e3801397-cbd0-47d4-9843-a8901cf343c2_audi.jpg",
       "SourceId": ".Net-API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
       "BasePath": "_content/.Net-API",
-      "RelativePath": "Images/dd8b6b6f-859d-4efb-97f7-81362cc176ff_tesla.jpg",
+      "RelativePath": "Images/e3801397-cbd0-47d4-9843-a8901cf343c2_audi.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\dd8b6b6f-859d-4efb-97f7-81362cc176ff_tesla.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\e3801397-cbd0-47d4-9843-a8901cf343c2_audi.jpg"
     }
   ]
 }
