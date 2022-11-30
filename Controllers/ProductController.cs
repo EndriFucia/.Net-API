@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Net;
 using System.IO;
 using System;
@@ -65,16 +66,16 @@ namespace Controllers
                 return NotFound();
             }
 
-            String[] strList = product.Image.Split("http://10.0.2.2:5067/Images/");
-            String filePath = _env.WebRootPath + "\\Images\\";
+            String imgNameToDelte = product.Image.Split("http://10.0.2.2:5067/Images/")[0];
+            String filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/");
 
             //Delet image
-            System.IO.File.Delete(Path.Combine(filePath, strList[0]));
+            System.IO.File.Delete(Path.Combine(filePath, imgNameToDelte));
             Console.WriteLine("File deleted.");
 
             //save the image file
             productsUpdateDTO.Image = Guid.NewGuid().ToString() + "_" + productsUpdateDTO.Image;
-            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", product.Image);
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", productsUpdateDTO.Image);
             await System.IO.File.WriteAllBytesAsync(fullPath, productsUpdateDTO.File);
             Console.WriteLine("File updated!.");
 
