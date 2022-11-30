@@ -57,7 +57,7 @@ namespace Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateProduct(int id, [FromForm] ProductsUpdateDTO productsUpdateDTO)
+        public async Task<ActionResult> UpdateProductAsync(int id, ProductsUpdateDTO productsUpdateDTO)
         {
             var product = _repo.GetProductById(id);
             if (product == null)
@@ -69,19 +69,13 @@ namespace Controllers
             String filePath = _env.WebRootPath + "\\Images\\";
 
             //Delet image
-            if (System.IO.File.Exists(Path.Combine(filePath, strList[0])))
-            {
-                // If file found, delete it    
-                System.IO.File.Delete(Path.Combine(filePath, strList[0]));
-                Console.WriteLine("File deleted.");
-            }
-
-            //Add the new image
-            productsUpdateDTO.Image = Guid.NewGuid().ToString() + "_" + productsUpdateDTO.File.FileName;
+            System.IO.File.Delete(Path.Combine(filePath, strList[0]));
+            Console.WriteLine("File deleted.");
 
             //save the image file
-            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", productsUpdateDTO.Image);
-            productsUpdateDTO.File.CopyTo(new FileStream(fullPath, FileMode.Create));
+            productsUpdateDTO.Image = Guid.NewGuid().ToString() + "_" + productsUpdateDTO.Image;
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", product.Image);
+            await System.IO.File.WriteAllBytesAsync(fullPath, productsUpdateDTO.File);
             Console.WriteLine("File updated!.");
 
 
