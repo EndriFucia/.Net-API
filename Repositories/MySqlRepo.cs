@@ -28,7 +28,14 @@ namespace Repositories
 
         public Product GetProductById(int id)
         {
-            return _context.Products.FirstOrDefault<Product>(p => p.Id == id);
+            Product p = new Product();
+            var prod = _context.Products.FirstOrDefault<Product>(p => p.Id == id);
+            if (prod != null)
+            {
+                p = prod;
+            }
+
+            return p;
         }
 
         public void AddProduct(Product product)
