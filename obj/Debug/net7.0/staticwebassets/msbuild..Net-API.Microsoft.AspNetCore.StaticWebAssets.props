@@ -32,6 +32,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\48de6d5c-5b37-498e-8aad-c13cf22dea9e_45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\5c7e2d67-48a7-431a-9f97-cf759c6df196_IMG_20221125_230659.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>.Net-API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/.Net-API</BasePath>
+      <RelativePath>Images/5c7e2d67-48a7-431a-9f97-cf759c6df196_IMG_20221125_230659.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\5c7e2d67-48a7-431a-9f97-cf759c6df196_IMG_20221125_230659.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\7bce997f-1098-47e7-94e3-24679f9c95c5_tesla.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>.Net-API</SourceId>

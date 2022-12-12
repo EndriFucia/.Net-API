@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  database-server: 
+    image: mysql:latest
+    container_name: database-server
+    env_file:
+      - database.env
+    volumes:
+      - database-volume:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  api-server:
+    build: .
+    container_name: maui-api
+    ports:
+      - 5067:80
+  
+  # database-migrations:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.migration
+  #   container_name: database-migration
+  #   tty: true
+
+volumes:
+  database-volume:

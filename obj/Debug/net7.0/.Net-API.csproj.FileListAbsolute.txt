@@ -44,3 +44,5 @@ C:\Users\endri\Desktop\Thomas More\C#\.Net-API\bin\Debug\net7.0\System.CodeDom.d
 C:\Users\endri\Desktop\Thomas More\C#\.Net-API\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\endri\Desktop\Thomas More\C#\.Net-API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\endri\Desktop\Thomas More\C#\.Net-API\bin\Debug\net7.0\.Net-API.staticwebassets.runtime.json
+C:\Users\endri\Desktop\Thomas More\C#\.Net-API\bin\Debug\net7.0\DotNetEnv.dll
+C:\Users\endri\Desktop\Thomas More\C#\.Net-API\bin\Debug\net7.0\Sprache.dll

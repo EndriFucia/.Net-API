@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QVfo8Ok08rjRtuWvrtWYWFw1mKHvK4RJ27PQuI6q7vo=",
+  "Hash": "TbV68QPabWJiArpUYb+dVzgEIUUvUDzdsWij717UhVc=",
   "Source": ".Net-API",
   "BasePath": "_content/.Net-API",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\48de6d5c-5b37-498e-8aad-c13cf22dea9e_45725222-e837-4e22-b3b5-686662a1898e_bmw.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\5c7e2d67-48a7-431a-9f97-cf759c6df196_IMG_20221125_230659.jpg",
+      "SourceId": ".Net-API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\",
+      "BasePath": "_content/.Net-API",
+      "RelativePath": "Images/5c7e2d67-48a7-431a-9f97-cf759c6df196_IMG_20221125_230659.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\5c7e2d67-48a7-431a-9f97-cf759c6df196_IMG_20221125_230659.jpg"
     },
     {
       "Identity": "C:\\Users\\endri\\Desktop\\Thomas More\\C#\\.Net-API\\wwwroot\\Images\\7bce997f-1098-47e7-94e3-24679f9c95c5_tesla.jpg",
