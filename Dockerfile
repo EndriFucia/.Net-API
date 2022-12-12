@@ -12,4 +12,5 @@ WORKDIR /App
 EXPOSE 80
 COPY --from=build_env /App/output .
 COPY database.env .
+RUN mkdir -p /App/wwwroot/Images
 ENTRYPOINT ["dotnet", ".Net-API.dll"]
