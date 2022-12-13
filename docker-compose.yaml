@@ -16,6 +16,8 @@ services:
     container_name: maui-api
     ports:
       - 5067:80
+    volumes:
+      - images-volume:/App/wwwroot/Images
   
   # database-migrations:
   #   build:
@@ -26,3 +28,4 @@ services:
 
 volumes:
   database-volume:
+  images-volume:
