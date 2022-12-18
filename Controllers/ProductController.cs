@@ -17,14 +17,11 @@ namespace Controllers
     {
         private readonly IProductRepo _repo;
         private readonly IMapper _mapper;
-        private readonly IWebHostEnvironment _env;
-        private readonly String _hostUrl = "http://10.0.2.2:5067/";
 
-        public ProductController(IProductRepo repo, IMapper mapper, IWebHostEnvironment env)
+        public ProductController(IProductRepo repo, IMapper mapper)
         {
             _repo = repo;
             _mapper = mapper;
-            _env = env;
         }
 
         [HttpGet]
@@ -86,18 +83,32 @@ namespace Controllers
             return Ok(product);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}", Name = "DeleteProduct")]
         public ActionResult DeleteProduct(int id)
         {
-            var productToDelete = _repo.GetProductById(id);
-            if (productToDelete == null)
+            var product = _repo.GetProductById(id);
+            if (product == null)
             {
                 return NotFound();
             }
 
-            _repo.DeleteProduct(productToDelete);
-            _repo.SaveChanges();
-            return NoContent();
+            String imgNameToDelte = product.Image.Split("http://10.0.2.2:5067/Images/")[0];
+            String filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/");
+
+            //Delet image
+            System.IO.File.Delete(Path.Combine(filePath, product.Image));
+            if (!System.IO.File.Exists(Path.Combine(filePath, product.Image)))
+            {
+                Console.WriteLine("File deleted.");
+
+                _repo.DeleteProduct(product);
+                _repo.SaveChanges();
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }

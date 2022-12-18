@@ -55,16 +55,6 @@ namespace Repositories
 
         public void DeleteProduct(Product product)
         {
-            String[] strList = product.Image.Split("http://10.0.2.2:5067/Images/");
-            String filePath = _env.WebRootPath + "\\Images\\";
-
-            if (File.Exists(Path.Combine(filePath, strList[0])))
-            {
-                // If file found, delete it    
-                File.Delete(Path.Combine(filePath, strList[0]));
-                Console.WriteLine("File deleted.");
-            }
-
             _context.Products.Remove(product);
         }
     }
