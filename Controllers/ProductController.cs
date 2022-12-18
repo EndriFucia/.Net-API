@@ -17,6 +17,8 @@ namespace Controllers
     {
         private readonly IProductRepo _repo;
         private readonly IMapper _mapper;
+        private readonly String _imagesPath = "wwwroot/Images/";
+        private readonly String _hostUrl = "http://10.0.2.2:5067/Images/";
 
         public ProductController(IProductRepo repo, IMapper mapper)
         {
@@ -45,7 +47,7 @@ namespace Controllers
             product.Image = Guid.NewGuid().ToString() + "_" + productsWriteDTO.Image;
 
             //save the image file
-            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", product.Image);
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), _imagesPath, product.Image);
             await System.IO.File.WriteAllBytesAsync(fullPath, productsWriteDTO.File);
 
             //Save data to DbContext
@@ -63,8 +65,8 @@ namespace Controllers
                 return NotFound();
             }
 
-            String imgNameToDelte = product.Image.Split("http://10.0.2.2:5067/Images/")[0];
-            String filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/");
+            String imgNameToDelte = product.Image.Split(_hostUrl)[0];
+            String filePath = Path.Combine(Directory.GetCurrentDirectory(), _imagesPath);
 
             //Delet image
             System.IO.File.Delete(Path.Combine(filePath, imgNameToDelte));
@@ -72,7 +74,7 @@ namespace Controllers
 
             //save the image file
             productsUpdateDTO.Image = Guid.NewGuid().ToString() + "_" + productsUpdateDTO.Image;
-            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/", productsUpdateDTO.Image);
+            var fullPath = Path.Combine(Directory.GetCurrentDirectory(), _imagesPath, productsUpdateDTO.Image);
             await System.IO.File.WriteAllBytesAsync(fullPath, productsUpdateDTO.File);
             Console.WriteLine("File updated!.");
 
@@ -92,8 +94,8 @@ namespace Controllers
                 return NotFound();
             }
 
-            String imgNameToDelte = product.Image.Split("http://10.0.2.2:5067/Images/")[0];
-            String filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/");
+            String imgNameToDelte = product.Image.Split(_hostUrl)[0];
+            String filePath = Path.Combine(Directory.GetCurrentDirectory(), _imagesPath);
 
             //Delet image
             System.IO.File.Delete(Path.Combine(filePath, product.Image));
