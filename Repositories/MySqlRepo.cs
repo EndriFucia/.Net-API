@@ -12,13 +12,11 @@ namespace Repositories
     {
         private readonly ProductsContext _context;
         private readonly IMapper _mapper;
-        private readonly IWebHostEnvironment _env;
         public List<Product> prodList { get; set; } = new();
 
         public MySqlRepo(ProductsContext context, IWebHostEnvironment env)
         {
             _context = context;
-            _env = env;
         }
 
         public IEnumerable<Product> GetAllProducts()
